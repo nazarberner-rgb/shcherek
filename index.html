@@ -759,17 +759,18 @@
                 padding: 0;
                 min-height: 100svh;
                 background:
-                    linear-gradient(180deg, rgba(31, 42, 36, 0.72) 0%, rgba(31, 42, 36, 0.48) 42%, rgba(31, 42, 36, 0.72) 100%),
+                    linear-gradient(180deg, rgba(31, 42, 36, 0.70) 0%, rgba(31, 42, 36, 0.42) 38%, rgba(31, 42, 36, 0.54) 68%, rgba(31, 42, 36, 0.82) 100%),
                     url("img/mobile.png");
                 background-size: cover;
-                background-position: center center;
+                background-position: center bottom;
                 background-repeat: no-repeat;
             }
 
             .hero-inner {
                 min-height: 100svh;
-                padding-top: 54px;
-                padding-bottom: 48px;
+                padding-top: 48px;
+                padding-bottom: 44px;
+                gap: 24px;
             }
 
             .nav-links {
@@ -799,15 +800,44 @@
         @media (max-width: 560px) {
             .hero {
                 background:
-                    linear-gradient(180deg, rgba(31, 42, 36, 0.62) 0%, rgba(31, 42, 36, 0.38) 42%, rgba(31, 42, 36, 0.78) 100%),
+                    linear-gradient(180deg, rgba(31, 42, 36, 0.74) 0%, rgba(31, 42, 36, 0.46) 36%, rgba(31, 42, 36, 0.58) 66%, rgba(31, 42, 36, 0.84) 100%),
                     url("img/mobile.png");
                 background-size: cover;
-                background-position: center center;
+                background-position: center bottom;
+            }
+
+            h1 {
+                font-size: clamp(38px, 12vw, 52px);
+                line-height: 1.03;
+                margin-bottom: 18px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+                line-height: 1.55;
+                margin-bottom: 22px;
             }
 
             .hero-card {
-                background: rgba(255, 250, 241, 0.84);
-                backdrop-filter: blur(14px);
+                background: rgba(255, 250, 241, 0.86);
+                backdrop-filter: blur(16px);
+                margin-top: 4px;
+            }
+
+            .hero-points {
+                gap: 10px;
+            }
+
+            .hero-point {
+                padding: 13px 14px;
+            }
+
+            .hero-point strong {
+                font-size: 16px;
+            }
+
+            .hero-point small {
+                font-size: 12px;
             }
 
             .hero-inner,
