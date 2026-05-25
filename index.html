@@ -475,6 +475,10 @@
             padding-bottom: 90px;
         }
 
+        .mobile-offer-section {
+            display: none;
+        }
+
         .contact-card {
             background: #fffaf1;
             color: var(--text);
@@ -759,7 +763,7 @@
                 padding: 0;
                 min-height: 100svh;
                 background:
-                    linear-gradient(180deg, rgba(31, 42, 36, 0.70) 0%, rgba(31, 42, 36, 0.42) 38%, rgba(31, 42, 36, 0.54) 68%, rgba(31, 42, 36, 0.82) 100%),
+                    linear-gradient(180deg, rgba(31, 42, 36, 0.76) 0%, rgba(31, 42, 36, 0.48) 38%, rgba(31, 42, 36, 0.42) 66%, rgba(31, 42, 36, 0.78) 100%),
                     url("img/mobile.png");
                 background-size: cover;
                 background-position: center bottom;
@@ -769,8 +773,29 @@
             .hero-inner {
                 min-height: 100svh;
                 padding-top: 48px;
-                padding-bottom: 44px;
-                gap: 24px;
+                padding-bottom: 42px;
+                gap: 22px;
+            }
+
+            .hero .hero-card {
+                display: none;
+            }
+
+            .mobile-offer-section {
+                display: block;
+                max-width: none;
+                margin: 0;
+                padding: 28px 16px 46px;
+                background: #fffaf1;
+            }
+
+            .mobile-offer-section .hero-card {
+                display: block;
+                max-width: 680px;
+                margin: 0 auto;
+                animation: none;
+                background: #fffaf1;
+                box-shadow: 0 20px 56px rgba(31, 42, 36, 0.12);
             }
 
             .nav-links {
@@ -942,6 +967,37 @@
                     </div>
                 </aside>
             </div>
+        </section>
+
+        <section class="mobile-offer-section" aria-label="Current offer">
+            <aside class="hero-card">
+                <div class="card-title">Current offer</div>
+
+                <div class="product-card">
+                    <h3>Frozen whole laying hens</h3>
+                    <p>Average size around 1.1–1.3 kg.</p>
+                </div>
+
+                <div class="product-card">
+                    <h3>Frozen half carcasses</h3>
+                    <p>Packed according to client requirements.</p>
+                </div>
+
+                <div class="spec-list">
+                    <div class="spec-row">
+                        <span>Packing</span>
+                        <strong>10–15 kg cartons</strong>
+                    </div>
+                    <div class="spec-row">
+                        <span>Standards</span>
+                        <strong>DSTU / HACCP</strong>
+                    </div>
+                    <div class="spec-row">
+                        <span>Product status</span>
+                        <strong>NO-GMO, Laboratory Control, Grade A Quality</strong>
+                    </div>
+                </div>
+            </aside>
         </section>
 
         <section id="company">
