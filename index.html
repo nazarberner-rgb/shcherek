@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHCHEREK LLC — Ukrainian Poultry Export Supplier</title>
+    <meta name="description" content="SHCHEREK LLC is a Ukrainian poultry processing company supplying frozen whole laying hens and frozen half carcasses for export markets in Africa and Asia.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --blue: #174ea6;
+            --blue-dark: #0f2f64;
+            --blue-soft: #eaf1ff;
+            --text: #172033;
+            --muted: #667085;
+            --line: #e5eaf3;
+            --bg: #f4f7fb;
+            --white: #ffffff;
+            --green: #12805c;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Inter, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page {
+            overflow: hidden;
+        }
+
+        .topbar {
+            width: 100%;
+            background: #ffffffcc;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 16px 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 20px;
+            color: var(--blue-dark);
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+            font-size: 14px;
+            color: #344054;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .nav-cta {
+            padding: 10px 16px;
+            background: var(--blue);
+            color: #fff;
+            border-radius: 999px;
+            font-weight: 700;
+        }
+
+        .hero {
+            position: relative;
+            background:
+                linear-gradient(135deg, rgba(15, 47, 100, 0.95), rgba(23, 78, 166, 0.88)),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.18), transparent 30%);
+            color: #fff;
+        }
+
+        .hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 86px 22px 70px;
+            display: grid;
+            grid-template-columns: 1.08fr 0.92fr;
+            gap: 46px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 13px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .eyebrow span {
+            width: 8px;
+            height: 8px;
+            background: #35d399;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: clamp(38px, 5vw, 68px);
+            line-height: 1.02;
+            letter-spacing: -0.04em;
+            margin-bottom: 22px;
+            max-width: 720px;
+        }
+
+        .hero-text {
+            font-size: 19px;
+            color: rgba(255, 255, 255, 0.86);
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 48px;
+            padding: 13px 20px;
+            border-radius: 999px;
+            font-weight: 800;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: var(--blue-dark);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+        }
+
+        .btn-secondary {
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-points {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            max-width: 740px;
+        }
+
+        .hero-point {
+            padding: 16px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .hero-point strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 2px;
+        }
+
+        .hero-point small {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.96);
+            color: var(--text);
+            padding: 28px;
+            border-radius: 26px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 18px;
+            color: var(--blue-dark);
+        }
+
+        .product-card {
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            margin-bottom: 14px;
+            background: #fbfcff;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .product-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .spec-list {
+            display: grid;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 14px;
+        }
+
+        .spec-row:last-child {
+            border-bottom: none;
+        }
+
+        .spec-row span {
+            color: var(--muted);
+        }
+
+        .spec-row strong {
+            text-align: right;
+        }
+
+        section {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 78px 22px;
+        }
+
+        .section-head {
+            max-width: 760px;
+            margin-bottom: 34px;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--blue);
+            background: var(--blue-soft);
+            padding: 7px 13px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: clamp(30px, 4vw, 44px);
+            letter-spacing: -0.03em;
+            line-height: 1.12;
+            margin-bottom: 14px;
+        }
+
+        .lead {
+            font-size: 18px;
+            color: var(--muted);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .info-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: 26px;
+            box-shadow: 0 14px 34px rgba(25, 40, 68, 0.05);
+        }
+
+        .info-card .icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            background: var(--blue-soft);
+            color: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            margin-bottom: 18px;
+        }
+
+        .info-card h3 {
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .info-card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .products {
+            background: #fff;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .products section {
+            padding-top: 78px;
+            padding-bottom: 78px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .export-product {
+            border: 1px solid var(--line);
+            border-radius: 26px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 18px 40px rgba(25, 40, 68, 0.06);
+        }
+
+        .product-visual {
+            height: 190px;
+            background:
+                linear-gradient(135deg, rgba(23,78,166,0.14), rgba(18,128,92,0.12)),
+                #f6f9ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blue-dark);
+            font-size: 44px;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+        }
+
+        .product-body {
+            padding: 26px;
+        }
+
+        .product-body h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .product-body p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #f2f5fb;
+            color: #344054;
+            padding: 7px 10px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 38px;
+            align-items: start;
+        }
+
+        .docs-box {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 26px;
+            padding: 30px;
+            box-shadow: 0 18px 40px rgba(25, 40, 68, 0.06);
+        }
+
+        .check-list {
+            list-style: none;
+            display: grid;
+            gap: 13px;
+        }
+
+        .check-list li {
+            position: relative;
+            padding-left: 32px;
+            color: #344054;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #e9f8f2;
+            color: var(--green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 900;
+        }
+
+        .contact-section {
+            padding-bottom: 90px;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+            color: #fff;
+            border-radius: 30px;
+            padding: 44px;
+            display: grid;
+            grid-template-columns: 1fr 0.85fr;
+            gap: 30px;
+            align-items: center;
+            box-shadow: 0 30px 80px rgba(23, 78, 166, 0.23);
+        }
+
+        .contact-card h2 {
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 17px;
+        }
+
+        .contact-details {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 22px;
+            padding: 24px;
+        }
+
+        .contact-line {
+            margin-bottom: 14px;
+        }
+
+        .contact-line span {
+            display: block;
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+
+        .contact-line strong,
+        .contact-line a {
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .footer {
+            border-top: 1px solid var(--line);
+            padding: 26px 22px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+            background: #fff;
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-inner,
+            .two-col,
+            .contact-card {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-points,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-inner {
+                padding-top: 62px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .hero-inner,
+            section {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero-card,
+            .docs-box,
+            .contact-card {
+                padding: 24px;
+                border-radius: 22px;
+            }
+
+            .product-visual {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <header class="topbar">
+        <nav class="nav">
+            <a class="logo" href="#top">SHCHEREK LLC</a>
+            <div class="nav-links">
+                <a href="#company">Company</a>
+                <a href="#products">Products</a>
+                <a href="#documents">Documents</a>
+                <a class="nav-cta" href="#contact">Contact supplier</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="hero-inner">
+                <div>
+                    <div class="eyebrow"><span></span> Ukrainian poultry export supplier</div>
+                    <h1>Frozen laying hens for importers and distributors</h1>
+                    <p class="hero-text">
+                        SHCHEREK LLC is a Ukrainian poultry processing company supplying frozen whole laying hens and frozen half carcasses for export markets in Africa and Asia.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#contact">Request details</a>
+                        <a class="btn btn-secondary" href="#products">View products</a>
+                    </div>
+
+                    <div class="hero-points">
+                        <div class="hero-point">
+                            <strong>12+ years</strong>
+                            <small>in poultry business</small>
+                        </div>
+                        <div class="hero-point">
+                            <strong>3 containers</strong>
+                            <small>monthly capacity</small>
+                        </div>
+                        <div class="hero-point">
+                            <strong>FCA terms</strong>
+                            <small>export cooperation</small>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="hero-card">
+                    <div class="card-title">Current offer</div>
+
+                    <div class="product-card">
+                        <h3>Frozen whole laying hens</h3>
+                        <p>Average size around 1.1–1.3 kg.</p>
+                    </div>
+
+                    <div class="product-card">
+                        <h3>Frozen half carcasses</h3>
+                        <p>Packed according to client requirements.</p>
+                    </div>
+
+                    <div class="spec-list">
+                        <div class="spec-row">
+                            <span>Packing</span>
+                            <strong>10–15 kg cartons</strong>
+                        </div>
+                        <div class="spec-row">
+                            <span>Standards</span>
+                            <strong>DSTU / HACCP</strong>
+                        </div>
+                        <div class="spec-row">
+                            <span>Product status</span>
+                            <strong>NO-GMO</strong>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="company">
+            <div class="section-head">
+                <span class="section-label">Company</span>
+                <h2>Poultry processing company from Ukraine</h2>
+                <p class="lead">
+                    We work with poultry processing and supply, focusing on stable quality, clear documentation, and long-term cooperation with international partners.
+                </p>
+            </div>
+
+            <div class="grid-3">
+                <div class="info-card">
+                    <div class="icon">01</div>
+                    <h3>Experience</h3>
+                    <p>More than 12 years of practical experience in the chicken industry and B2B poultry supply.</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">02</div>
+                    <h3>Official permit</h3>
+                    <p>We operate under our own official Veterinary Exploitation Permit for poultry products.</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">03</div>
+                    <h3>Export focus</h3>
+                    <p>Currently interested in developing cooperation with importers and distributors in Africa and Asia.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="products" id="products">
+            <section>
+                <div class="section-head">
+                    <span class="section-label">Products</span>
+                    <h2>Products available for supply</h2>
+                    <p class="lead">
+                        Our main export offer includes frozen whole laying hens and frozen half carcasses of laying hens.
+                    </p>
+                </div>
+
+                <div class="product-grid">
+                    <div class="export-product">
+                        <div class="product-visual">1.1–1.3 kg</div>
+                        <div class="product-body">
+                            <h3>Frozen whole laying hens</h3>
+                            <p>Frozen whole laying hens with average size around 1.1–1.3 kg. Packing is usually arranged in 10–15 kg cartons depending on client requirements.</p>
+                            <div class="tags">
+                                <span class="tag">Frozen</span>
+                                <span class="tag">Whole carcass</span>
+                                <span class="tag">10–15 kg cartons</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="export-product">
+                        <div class="product-visual">½</div>
+                        <div class="product-body">
+                            <h3>Frozen half carcasses</h3>
+                            <p>Frozen half carcasses of laying hens for importers, distributors, wholesale buyers and further processing needs.</p>
+                            <div class="tags">
+                                <span class="tag">Frozen</span>
+                                <span class="tag">Half carcass</span>
+                                <span class="tag">Export supply</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="documents">
+            <div class="two-col">
+                <div class="section-head">
+                    <span class="section-label">Quality & documents</span>
+                    <h2>Clear supplier documentation for import review</h2>
+                    <p class="lead">
+                        We can provide company information, product photos and available Ukrainian documentation for initial supplier verification.
+                    </p>
+                </div>
+
+                <div class="docs-box">
+                    <ul class="check-list">
+                        <li>Production according to DSTU standards</li>
+                        <li>HACCP system implemented at the facility</li>
+                        <li>Official Veterinary Exploitation Permit</li>
+                        <li>Company information for supplier verification</li>
+                        <li>Product photos and packing details</li>
+                        <li>NO-GMO products</li>
+                        <li>FCA cooperation terms available</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="contact-card">
+                <div>
+                    <h2>Contact SHCHEREK LLC</h2>
+                    <p>
+                        Send us your required product, specification, target volume and destination market. We will provide available details and discuss the next steps for cooperation.
+                    </p>
+                </div>
+
+                <div class="contact-details">
+                    <div class="contact-line">
+                        <span>Email</span>
+                        <a href="mailto:sales@shcherek.com.ua">sales@shcherek.com.ua</a>
+                    </div>
+                    <div class="contact-line">
+                        <span>Phone / WhatsApp</span>
+                        <a href="tel:+380731199524">+38 (067) 907 07 39</a>
+                       <a href="tel:+380731199524">+38 (099) 079 40 90</a>
+                    </div>
+                    <div class="contact-line">
+                        <span>Website</span>
+                        <strong>shcherek.com.ua</strong>
+                    </div>
+                    <div class="contact-line">
+                        <span>Country</span>
+                        <strong>Ukraine</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        © 2026 SHCHEREK LLC. Ukrainian poultry processing company.
+    </footer>
+
+</div>
+</body>
+</html>
