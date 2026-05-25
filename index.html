@@ -810,30 +810,18 @@
                 width: 100%;
                 max-width: none;
                 margin: 0;
-                padding: 0 16px 34px;
+                padding: 34px 16px 40px;
                 min-height: auto;
-                background: #fffaf1;
-                color: #fff;
-            }
-
-            .hero::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                height: 430px;
-                border-radius: 0 0 34px 34px;
                 background:
-                    linear-gradient(180deg, rgba(31, 42, 36, 0.10) 0%, rgba(31, 42, 36, 0.24) 52%, rgba(31, 42, 36, 0.68) 100%),
+                    linear-gradient(180deg, rgba(31, 42, 36, 0.64) 0%, rgba(31, 42, 36, 0.52) 48%, rgba(31, 42, 36, 0.72) 100%),
                     url("img/mobile.png");
                 background-size: cover;
                 background-position: center bottom;
                 background-repeat: no-repeat;
-                filter: saturate(1.04) contrast(1.02);
-                animation: none;
+                color: #fff;
             }
 
+            .hero::before,
             .hero::after {
                 display: none;
             }
@@ -841,18 +829,18 @@
             .hero-inner {
                 min-height: auto;
                 display: block;
-                padding: 275px 0 0;
+                padding: 0;
                 position: relative;
                 z-index: 1;
             }
 
             .hero-inner > div:first-child {
-                padding: 24px;
-                border-radius: 28px;
-                background: rgba(31, 42, 36, 0.84);
-                border: 1px solid rgba(255, 250, 241, 0.20);
-                box-shadow: 0 28px 70px rgba(31, 42, 36, 0.30);
-                backdrop-filter: blur(16px);
+                padding: 0;
+                border-radius: 0;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                backdrop-filter: none;
             }
 
             .hero .hero-card {
@@ -864,15 +852,17 @@
             }
 
             h1 {
-                font-size: clamp(37px, 10.6vw, 50px);
+                font-size: clamp(39px, 11vw, 56px);
                 line-height: 1.02;
                 margin-bottom: 18px;
+                max-width: 640px;
             }
 
             .hero-text {
                 font-size: 16px;
                 line-height: 1.55;
                 margin-bottom: 22px;
+                max-width: 640px;
             }
 
             .hero-actions {
@@ -888,7 +878,7 @@
             .hero-point {
                 padding: 12px 14px;
                 border-radius: 18px;
-                background: rgba(255, 250, 241, 0.10);
+                background: rgba(255, 250, 241, 0.12);
             }
 
             .hero-point strong {
@@ -961,23 +951,12 @@
 
         @media (max-width: 560px) {
             .hero {
-                padding-left: 14px;
-                padding-right: 14px;
-                padding-bottom: 30px;
-            }
-
-            .hero::before {
-                height: 395px;
+                padding: 30px 14px 34px;
+                background:
+                    linear-gradient(180deg, rgba(31, 42, 36, 0.66) 0%, rgba(31, 42, 36, 0.52) 50%, rgba(31, 42, 36, 0.76) 100%),
+                    url("img/mobile.png");
+                background-size: cover;
                 background-position: center bottom;
-            }
-
-            .hero-inner {
-                padding-top: 238px;
-            }
-
-            .hero-inner > div:first-child {
-                padding: 22px;
-                border-radius: 26px;
             }
 
             .hero-inner,
@@ -1002,7 +981,7 @@
             }
 
             .mobile-offer-section {
-                padding: 26px 14px 44px;
+                padding: 28px 14px 44px;
             }
 
             .mobile-offer-section .hero-card,
