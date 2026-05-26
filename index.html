@@ -239,7 +239,7 @@
         .card-title {
             font-size: 22px;
             font-weight: 800;
-            margin-bottom: 18px;
+            margin-bottom: 0;
             color: #1f2a24;
         }
 
@@ -325,7 +325,7 @@
 
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 18px;
         }
 
@@ -338,21 +338,25 @@
         }
 
         .info-card .icon {
-            width: 42px;
-            height: 42px;
-            border-radius: 14px;
-            background: #efe4cf;
-            color: var(--brown);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 900;
-            margin-bottom: 18px;
+            display: none;
         }
 
         .info-card h3 {
             font-size: 19px;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            position: relative;
+            padding-top: 14px;
+        }
+
+        .info-card h3::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 38px;
+            height: 3px;
+            border-radius: 999px;
+            background: var(--gold);
         }
 
         .info-card p {
@@ -483,8 +487,10 @@
         .offer-topline {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .offer-topline::before {
@@ -943,7 +949,7 @@
             }
 
             .grid-3 {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .product-grid {
@@ -952,6 +958,10 @@
         }
 
         @media (max-width: 560px) {
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
             .hero {
                 padding: 30px 14px 34px;
                 background:
@@ -1190,19 +1200,20 @@
 
             <div class="grid-3">
                 <div class="info-card">
-                    <div class="icon">01</div>
                     <h3>Experience</h3>
                     <p>More than 12 years of practical experience in the chicken industry and B2B poultry supply.</p>
                 </div>
                 <div class="info-card">
-                    <div class="icon">02</div>
                     <h3>Official permit</h3>
                     <p>We operate under our own official Veterinary Exploitation Permit for poultry products.</p>
                 </div>
                 <div class="info-card">
-                    <div class="icon">03</div>
                     <h3>Export focus</h3>
                     <p>Currently interested in developing cooperation with importers and distributors in Africa and Asia.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Production facility</h3>
+                    <p>Ukraine, Ternopil region, Zboriv town, Kuklyntsi str. 90-1.</p>
                 </div>
             </div>
         </section>
